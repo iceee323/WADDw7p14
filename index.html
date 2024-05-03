@@ -11,19 +11,38 @@
 
 <body>
     <form name="myForm">
-        <label for="user">Enter your full name: </label>
-        <input id="user" name="fullName" type="text" placeholder="Full name" required>
-        <label for="user">Enter your email: </label>
-        <input id="user" name="email" type="email" placeholder="Email" required>
-        <label for="user">Enter your phone number: </label>
-        <input id="user" name="phoneNum" type="tel" placeholder="Phone number" required>
+        <label for="userName">* Enter your full name: </label><br>
+        <input id="userName" name="fullName" type="text" placeholder="Full name" required><br>
+        <label for="userEmail">* Enter your email: </label><br>
+        <input id="userEmail" name="email" type="email" placeholder="Email" required><br>
+        <label for="userPhone">Enter your phone number: </label><br>
+        <input id="userPhone" name="phoneNum" type="tel" placeholder="Phone number"><br>
         <fieldset>
-            <legend>Do you have outside space?</legend>
-            <label for=“yes”>Yes</label>
-            <input id=“yes” name=“outsideSpace” type="radio" value=“yes”>
-            <label for=“no”>No</label>
-            <input id=“no” name=“outsideSpace” type="radio" value=“no”>
-            </fieldset>
+            <legend>* Do you have outside space?</legend>
+            <label for=“outsideYes”>Yes</label>
+            <input id=“outsideYes” name=“outsideSpace” type="radio" value=“yes” required>
+            <label for=“outsideNo”>No</label>
+            <input id=“outsideNo” name=“outsideSpace” type="radio" value=“no”>
+        </fieldset>
+        <fieldset>
+            <legend>* Do you have children living in or regularly visiting the home?</legend>
+            <label for=“visitYes”>Yes</label>
+            <input id=“visitYes” name=“children” type="radio" value=“yes” required>
+            <label for=“visitNo”>No</label>
+            <input id=“visitNo” name=“children” type="radio" value=“no”><br><br>
+            <label for="childrenAge">* What are the age ranges of the children? (0-17)</label><br>
+            <input id="childrenAge" type="number" placeholder="Age" min="0" max="17">
+        </fieldset>
+        <fieldset>
+            <legend>* Do you have other pets in the home?</legend>
+            <label for=“otherPetsYes”>Yes</label>
+            <input id=“otherPetsYes” name=“otherPets” type="radio" value=“yes” required>
+            <label for=“otherPetsNo”>No</label>
+            <input id=“otherPetsNo” name="otherPets" type="radio" value=“no”><br><br>
+            <label for="petSpecies">* What are the species of the other pets? (e.g. dog, bird, fish)</label><br>
+            <input id="petSpecies" name="speciesName" type="text" placeholder="Pet Species">
+        </fieldset>
+        <input type="submit" id="submit" value="Submit">
     </form>
     <script src="main.js"></script>
 </body>
