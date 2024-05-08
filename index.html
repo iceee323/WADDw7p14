@@ -27,19 +27,19 @@
         <fieldset>
             <legend>* Do you have children living in or regularly visiting the home?</legend>
             <label for=“visitYes”>Yes</label>
-            <input id=“visitYes” name=“children” type="radio" value=“yes” required>
+            <input id=“visitYes” name="children" type="radio" value="yes" required>
             <label for=“visitNo”>No</label>
-            <input id=“visitNo” name=“children” type="radio" value=“no”><br><br>
-            <label for="childrenAge">* What are the age ranges of the children? (0-17)</label><br>
-            <input id="childrenAge" type="number" placeholder="Age" min="0" max="17">
+            <input id=“visitNo” name="children" type="radio" value="no"><br><br>
+            <label for="child-ages" id="child-ages-label">* What are the age ranges of the children? (0-17)</label><br>
+            <input id="child-ages" type="number" placeholder="Age" min="0" max="17">
         </fieldset>
         <fieldset>
             <legend>* Do you have other pets in the home?</legend>
-            <label for=“otherPetsYes”>Yes</label>
-            <input id=“otherPetsYes” name=“otherPets” type="radio" value=“yes” required>
-            <label for=“otherPetsNo”>No</label>
-            <input id=“otherPetsNo” name="otherPets" type="radio" value=“no”><br><br>
-            <label for="petSpecies">* What are the species of the other pets? (e.g. dog, bird, fish)</label><br>
+            <label for="petsYes">Yes</label>
+            <input id=“petsYes” name="pets" type="radio" value="yes" required>
+            <label for=“petsNo”>No</label>
+            <input id=“petsNo” name="pets" type="radio" value="no"><br><br>
+            <label for="petSpecies" id="petSpecies_label">* What are the species of the other pets? (e.g. dog, bird, fish)</label><br>
             <input id="petSpecies" name="speciesName" type="text" placeholder="Pet Species">
         </fieldset>
         <br><input type="submit" id="submit" value="Submit">
