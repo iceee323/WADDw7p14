@@ -1,6 +1,20 @@
 document.getElementById("submit").addEventListener("click", function (buttonClicked) {   
-  preventDefault();
+  event.preventDefault();
   console.log("Submit clicked");
+
+  if (document.getElementById("childYes").checked) {
+    console.log("User has answered yes to this question - child");
+    if (document.getElementById("child-ages").value === "") {
+      console.log("Required follow up question (age) not answered!");
+    }
+  }
+
+  if (document.getElementById("petsYes").checked) {
+    console.log("User has answered yes to this question - pets");
+    if (document.getElementById("petSpecies").value === "") {
+      console.log("Required follow up question (species) not answered!");
+    }
+  }
 });
 
 
@@ -23,13 +37,6 @@ for (let childOption of children) {
   childOption.addEventListener("change", childOptionChanged);
 }
 
-if (document.getElementById("childYes").checked) {
-  console.log("User has answered yes to this question - child");
-  if (document.getElementById("child-ages").value === "") {
-    console.log("Required follow up question (age) not answered!");
-  }
-}
-
 
 const pets = document.getElementsByName("pets");
 
@@ -50,10 +57,5 @@ for (let petOption of pets) {
   petOption.addEventListener("change", petsOptionChanged);
 }
 
-if (document.getElementById("petsYes").checked) {
-  console.log("User has answered yes to this question - pets");
-  if (document.getElementById("petSpecies").value === "") {
-    console.log("Required follow up question (species) not answered!");
-  }
-}
+
 
